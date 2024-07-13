@@ -1,0 +1,24 @@
+{
+  "name": "microservice-2",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/microservice-2/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "microservice-2:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "microservice-2:build:development"
+        },
+        "production": {
+          "buildTarget": "microservice-2:build:production"
+        }
+      }
+    }
+  }
+}

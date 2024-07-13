@@ -1,0 +1,24 @@
+{
+  "name": "microservice-3",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/microservice-3/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "microservice-3:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "microservice-3:build:development"
+        },
+        "production": {
+          "buildTarget": "microservice-3:build:production"
+        }
+      }
+    }
+  }
+}
